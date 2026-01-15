@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Banner — Especial Festival del Huaso de Olmué 2026</title>
+  <title>Banner — Especial Olmué 2026</title>
 
   <style>
-    /* Base para evitar márgenes y desbordes en iframes */
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: transparent; }
+    *{ box-sizing:border-box; }
+    html, body{ margin:0; padding:0; background:transparent; }
 
     .olmue-banner{
       position:relative;
@@ -16,7 +15,6 @@
       max-width:100%;
       border-radius:10px;
       overflow:hidden;
-      /* IMPORTANTE: evita line-height:0 en el contenedor, puede afectar texto/CTA */
     }
 
     .olmue-banner__img{
@@ -25,7 +23,6 @@
       display:block;
     }
 
-    /* Caja CTA */
     .olmue-banner__cta{
       position:absolute;
       right:18px;
@@ -36,8 +33,9 @@
       line-height:1.2;
       padding:14px 14px 12px;
       border-radius:12px;
-      background:rgba(0,0,0,.35);
+      background:rgba(0,0,0,.40);
       backdrop-filter: blur(2px);
+      z-index:2; /* clave: arriba de la imagen */
     }
 
     .olmue-banner__btn{
@@ -51,18 +49,6 @@
       background:#ffcc33;
       color:#0b0b0b;
       box-shadow:0 6px 18px rgba(0,0,0,.25);
-      transition:transform .12s ease, filter .12s ease;
-      white-space: normal;
-    }
-
-    .olmue-banner__btn:hover{
-      filter:brightness(1.03);
-      transform:translateY(-1px);
-    }
-
-    .olmue-banner__btn:focus{
-      outline:3px solid rgba(255,204,51,.7);
-      outline-offset:3px;
     }
 
     .olmue-banner__hint{
@@ -72,7 +58,6 @@
       color:rgba(255,255,255,.9);
     }
 
-    /* Responsive móvil */
     @media (max-width: 640px){
       .olmue-banner__cta{
         left:12px;
@@ -84,24 +69,9 @@
         text-align:center;
         padding:12px;
       }
-
       .olmue-banner__btn{
         width:100%;
         text-align:center;
-        font-size:16px;
-        padding:12px 14px;
-      }
-
-      .olmue-banner__hint{
-        font-size:12px;
-      }
-    }
-
-    /* Extra: teléfonos muy pequeños */
-    @media (max-width: 360px){
-      .olmue-banner__btn{
-        font-size:15px;
-        padding:11px 12px;
       }
     }
   </style>
@@ -131,4 +101,5 @@
   </div>
 </body>
 </html>
+
 

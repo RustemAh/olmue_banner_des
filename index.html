@@ -1,0 +1,97 @@
+<div class="olmue-banner" role="region" aria-label="Especial Festival del Huaso de Olmué 2026">
+  <img
+    class="olmue-banner__img"
+    src="https://www.epicentrochile.com/wp-content/uploads/2026/01/banner-especial_olmu_dest.png"
+    alt="Festival del Huaso de Olmué 2026 — Cobertura especial"
+    loading="lazy"
+  />
+
+  <div class="olmue-banner__cta">
+    <a
+      class="olmue-banner__btn"
+      href="https://rustemah.github.io/olmue_especial/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Ingresar al especial de prensa del Festival del Huaso de Olmué 2026"
+    >
+      Ingresar al especial de prensa
+    </a>
+    <div class="olmue-banner__hint">Festival del Huaso de Olmué 2026</div>
+  </div>
+</div>
+
+<style>
+  .olmue-banner{
+    position:relative;
+    max-width:100%;
+    line-height:0; /* evita espacios raros bajo la imagen */
+    border-radius:10px;
+    overflow:hidden;
+  }
+
+  .olmue-banner__img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  /* Caja CTA (simula “módulo” donde estaría el video) */
+  .olmue-banner__cta{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:min(380px, 42%);
+    text-align:right;
+    line-height:1.2;
+    padding:14px 14px 12px;
+    border-radius:12px;
+    background:rgba(0,0,0,.35);
+    backdrop-filter: blur(2px);
+  }
+
+  .olmue-banner__btn{
+    display:inline-block;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    font-weight:700;
+    font-size:16px;
+    padding:12px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    background:#ffcc33;
+    color:#0b0b0b;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    transition:transform .12s ease, filter .12s ease;
+  }
+
+  .olmue-banner__btn:hover{
+    filter:brightness(1.03);
+    transform:translateY(-1px);
+  }
+
+  .olmue-banner__btn:focus{
+    outline:3px solid rgba(255,204,51,.7);
+    outline-offset:3px;
+  }
+
+  .olmue-banner__hint{
+    margin-top:8px;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    font-size:12px;
+    color:rgba(255,255,255,.9);
+  }
+
+  /* Responsive: en pantallas chicas, el botón baja al centro inferior */
+  @media (max-width: 640px){
+    .olmue-banner__cta{
+      left:12px;
+      right:12px;
+      top:auto;
+      bottom:12px;
+      transform:none;
+      max-width:none;
+      text-align:center;
+    }
+    .olmue-banner__btn{ width:100%; text-align:center; }
+  }
+</style>
